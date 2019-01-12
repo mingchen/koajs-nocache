@@ -1,6 +1,6 @@
 {
   "name": "koajs-nocache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add nocache headers to koajs response",
   "main": "index.js",
   "scripts": {
