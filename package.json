@@ -1,6 +1,6 @@
 {
   "name": "koajs-nocache",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Add nocache headers to koajs response",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "author": "Ming Chen <ming_c@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^4.2.0",
     "jshint": "^2.9.7",
     "koa": "^2.0.0",
     "koa-router": "^7.0.0",
