@@ -1,8 +1,8 @@
 # koa-nocache
 
-[![Build Status](https://travis-ci.org/mingchen/koa-nocache.svg?branch=master)](https://travis-ci.org/mingchen/koa-nocache)
+[![Build Status](https://travis-ci.org/mingchen/koajs-nocache.svg?branch=master)](https://travis-ci.org/mingchen/koajs-nocache)
 
-[![NPM](https://nodei.co/npm/koa-nocache.png?downloads=true)](https://nodei.co/npm/koa-nocache/)
+[![NPM](https://nodei.co/npm/koajs-nocache.png?downloads=true)](https://nodei.co/npm/koajs-nocache/)
 
 
 ## Introduction
