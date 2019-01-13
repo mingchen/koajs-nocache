@@ -18,13 +18,13 @@ module.exports = function nocache(options) {
     methods = [methods];
   }
 
-  return function nocacheMiddleware(ctx, next) {
+  return async function nocacheMiddleware(ctx, next) {
     if (methods.includes(ctx.method)) {
       ctx.set('Cache-Control', 'no-cache, no-store, must-revalidate');
       ctx.set('Expires', '0');
       ctx.set('Pragma', 'no-cache');
     }
 
-    next();
+    await next();
   };
 };
