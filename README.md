@@ -1,4 +1,4 @@
-# koa-nocache
+# koajs-nocache
 
 [![Build Status](https://travis-ci.org/mingchen/koajs-nocache.svg?branch=master)](https://travis-ci.org/mingchen/koajs-nocache)
 
