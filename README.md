@@ -20,17 +20,19 @@ The following headers are added to response header:
 
     npm install koajs-nocache
 
-## nocache(options)
+## API
+
+nocache(options):
 
     /**
-    * nocache middleware.
-    *
-    * @param {Object} [options]
-    *  - {String|Array} methods need add nocache headers.
-    *                   default is ['GET']
-    *
-    * @return {Function} nocache middleware
-    */
+     * nocache middleware.
+     *
+     * @param {Object} [options]
+     *                 - {String|Array} methods need add nocache headers.
+     *                                  default is ['GET']
+     *
+     * @return {Function} nocache middleware
+     */
 
 ## Usage
 
@@ -55,4 +57,5 @@ Checkout `test/nocache_test.js` for example usages.
 
 ## License
 
-MIT
+[MIT](LICENSE.txt)
+
