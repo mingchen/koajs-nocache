@@ -17,8 +17,9 @@ describe('Test nocache middleware', function() {
     request(app.callback()).get('/')
       .expect(200)
       .expect('Expires', '0')
-      .expect('Cache-Control', 'no-cache, no-store, must-revalidate')
+      .expect('Cache-Control', 'no-cache, no-store, must-revalidate, proxy-revalidate')
       .expect('Pragma', 'no-cache')
+      .expect('Surrogate-Control', 'no-store')
       .end(done);
   });
 
@@ -34,8 +35,9 @@ describe('Test nocache middleware', function() {
     request(app.callback()).put('/')
       .expect(200)
       .expect('Expires', '0')
-      .expect('Cache-Control', 'no-cache, no-store, must-revalidate')
+      .expect('Cache-Control', 'no-cache, no-store, must-revalidate, proxy-revalidate')
       .expect('Pragma', 'no-cache')
+      .expect('Surrogate-Control', 'no-store')
       .end(done);
   });
 
@@ -60,6 +62,7 @@ describe('Test nocache middleware', function() {
         expect(res.headers).to.not.include.key('expires');
         expect(res.headers).to.not.include.key('cache-control');
         expect(res.headers).to.not.include.key('pragma');
+        expect(res.headers).to.not.include.key('Surrogate-Control');
 
         done();
       });
@@ -82,8 +85,9 @@ describe('Test nocache middleware', function() {
     request(app.callback()).get('/api/bar')
       .expect(200)
       .expect('Expires', '0')
-      .expect('Cache-Control', 'no-cache, no-store, must-revalidate')
+      .expect('Cache-Control', 'no-cache, no-store, must-revalidate, proxy-revalidate')
       .expect('Pragma', 'no-cache')
+      .expect('Surrogate-Control', 'no-store')
       .end(done);
   });
 
@@ -102,8 +106,9 @@ describe('Test nocache middleware', function() {
     request(app.callback()).get('/api/bar')
       .expect(200)
       .expect('Expires', '0')
-      .expect('Cache-Control', 'no-cache, no-store, must-revalidate')
+      .expect('Cache-Control', 'no-cache, no-store, must-revalidate, proxy-revalidate')
       .expect('Pragma', 'no-cache')
+      .expect('Surrogate-Control', 'no-store')
       .end(done);
   });
 
@@ -131,6 +136,7 @@ describe('Test nocache middleware', function() {
         expect(res.headers).to.not.include.key('expires');
         expect(res.headers).to.not.include.key('cache-control');
         expect(res.headers).to.not.include.key('pragma');
+        expect(res.headers).to.not.include.key('surrogate-control');
 
         done();
       });
@@ -151,8 +157,9 @@ describe('Test nocache middleware', function() {
     request(app.callback()).post('/api/foobar')
       .expect(200)
       .expect('Expires', '0')
-      .expect('Cache-Control', 'no-cache, no-store, must-revalidate')
+      .expect('Cache-Control', 'no-cache, no-store, must-revalidate, proxy-revalidate')
       .expect('Pragma', 'no-cache')
+      .expect('Surrogate-Control', 'no-store')
       .end(done);
   });
 });
