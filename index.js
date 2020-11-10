@@ -20,7 +20,8 @@ module.exports = function nocache(options) {
 
   return async function nocacheMiddleware(ctx, next) {
     if (methods.includes(ctx.method)) {
-      ctx.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+      ctx.set('Cache-Control', 'no-cache, no-store, must-revalidate, proxy-revalidate');
+      ctx.set('Surrogate-Control', 'no-store');
       ctx.set('Expires', '0');
       ctx.set('Pragma', 'no-cache');
     }
