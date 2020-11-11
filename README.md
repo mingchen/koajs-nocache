@@ -12,9 +12,10 @@ It is useful for REST API response, add no-cache headers to avoid browsers cache
 
 The following headers are added to response header:
 
-    Cache-Control: no-cache, no-store, must-revalidate
+    Cache-Control: no-cache, no-store, must-revalidate, proxy-revalidate
     Expires: 0
     Pragma: no-cache
+    Surrogate-Control: no-store
 
 ## Install
 
